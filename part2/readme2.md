@@ -1,9 +1,4 @@
-## Implementační dokumentace k 2. úloze do IPP 2020/2021
-**Jméno a příjmení:** Kateřina Cibulcová
 
-**Login:** xcibul12
-
-### Úvod
 
 Tato dokumentace popisuje implementační detaily skriptu `interpret.py`, který načítá 
 a interpretuje XML reprezentaci kódu a následně kód provádí.
@@ -33,6 +28,3 @@ některé instrukce (např. `EXIT` ) vykonávány přímo ve výše jmenované �
 Důležitou částí interpretu byla také práce s regulárními výrazy, pro kterou je využívána knihovna `re` a jejich prostřednictvím je kontrolována správná struktura XML kódu – validní názvy proměnných, validní hodnoty určitých datových typů apod. V této části bylo zapotřebí důsledné ošetřování regulárních výrazů, což zabralo významné množství času strávené na projektu. Výše popsaným způsobem byly kontrolovány a ukládány argumenty instrukcí a tyto argumenty byly ještě jednou zpracovány jako operandy podle toho, zda šlo o instrukci se dvěma nebo třemi operandy.
 Tyto argumenty poté byly seřazeny do polí a k určitým hodnotám je přistupováno skrz příslušné indexy. Tříd je využíváno zejména kvůli přehlednosti také v případě zásobníkových instrukcí (`Stack` ) a načtení všech návěští ze seznamu instrukcí (`Label`) a pro chybové hlášky a návratové kódy (`Error`).
 
-### Test.php
-
-Skript `test.php` bohužel nebyl z důvodu časové tísně implementován.
